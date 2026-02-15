@@ -1,3 +1,6 @@
-export default function handler(req, res) {
-    res.status(200).json({ message: "Hello from Netlify serverless!" });
+export async function handler(event, context) {
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: "Hello from serverless!" }),
+  };
 }
